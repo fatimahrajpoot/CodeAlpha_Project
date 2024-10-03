@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="gallery-container">
+    <div class="gallery">
+        <img src="img/pic.jpg" alt="Image 1" onclick="setProminent(this)">
+        <img src="img/pic1.jpeg" alt="Image 2" onclick="setProminent(this)">
+        <img src="img/pic9.jpeg" alt="Image 3" onclick="setProminent(this)">
+        <img src="img/pic2.jpeg" alt="Image 4" onclick="setProminent(this)">
+        <img src="img/pic3.jpeg" alt="Image 5" onclick="setProminent(this)">
+    </div>
+    
+    <div style="position: relative;">
+        <img id="prominentImage" class="prominent" src="" alt="Prominent Image">
+        <button class="close-button" onclick="closeImage()">Close</button>
+    </div>
+
+    <div class="gallery">
+        <img src="img/pic8.jpeg" alt="Image 6" onclick="setProminent(this)">
+        <img src="img/pic7.jpeg" alt="Image 7" onclick="setProminent(this)">
+        <img src="img/pic5.jpg" alt="Image 8" onclick="setProminent(this)">
+        <img src="img/pic4.jpeg" alt="Image 9" onclick="setProminent(this)">
+        <img src="img/pic6.jpeg" alt="Image 10" onclick="setProminent(this)">
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

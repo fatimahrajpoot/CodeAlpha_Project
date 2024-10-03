@@ -1,0 +1,76 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+   background: linear-gradient(to bottom right, #e0e0e0, #ffffff); /*Gradient background */
+}
+.gallery-container {
+  display: grid;
+  grid-template-columns: 1fr 300px 1fr; /* Two columns for thumbnails and one for the prominent image */
+  gap: 10px; /* Space between the images */
+  justify-items: center; /* Center images horizontally within their grid cells */
+  background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+  border-radius: 10px; /* Rounded corners */
+  padding: 20px; /* Padding around the gallery */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+}
+.gallery {
+  display: flex;
+  flex-direction: column; /* Stack images vertically */
+  align-items: center; /* Center images horizontally */
+}
+.gallery img {
+  width: 150px;
+  height: 100px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s, border-color 0.3s;
+}
+.gallery img:hover {
+  transform: scale(1.1);
+}
+.prominent {
+  width: 300px;
+  height: 200px;
+  border: 2px solid #007BFF;
+  z-index: 1;
+  display: none; /* Hidden by default */
+  margin-bottom: 20px; /* Space below the prominent image */
+  align-self: center; /* Center the prominent image */
+}
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: rgba(255, 0, 0, 0.1); /*  Light red before click */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 8px 12px; /* Increased padding */
+  font-size: 16px; /* Increased font size */
+  transition: back-ground-color 0.3s; /* Smooth transition */
+   display: none;/* Hidden by default */
+}
+
+.close-button:hover{
+  background-color: rgba(255, 0, 0, 0.9); /* Change to solid red on hover */
+  transition: ease-in 0.3s;
+}
+
+/* Start Media Query */
+
+@media (max-width:799px) {
+  
+}
+
+
+  @media (max-width: 670px) {
+    .gallery-container {
+      display: grid;
+      grid-template-columns: 1fr 300px ;
+      gap: 10px;
+      justify-items: center;
+    }
+  }
